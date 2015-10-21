@@ -1,0 +1,12 @@
+<section>
+   <% @items.each do |item| %>
+    <article>
+      <dl>
+        <dt>Item:</dt>
+        <dd><%= item['item'] %> </dd>
+      </dl>
+      <a href="/items/<%= item['id'] %>">Show</a>
+      <a href="/items/<%= item['id'] %>/edit">Edit</a>
+    </article>
+    <% end %>
+    </section>

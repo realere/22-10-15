@@ -65,6 +65,8 @@ post '/items/:id' do
 end
 
 post '/items/:id/delete' do
+sql = "delete from items where id ='#{params[:id]}'"
+run_sql(sql)
   redirect to('/')
 end
 def run_sql(sql)
